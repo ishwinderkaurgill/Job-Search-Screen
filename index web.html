@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Search Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet" />
+    <script
+        src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000"
+        data-border-radius="small"></script>
+</head>
+
+<body class="bg-gray-50 font-sans">
+    <!-- Nav remains same -->
+    <nav class="bg-white shadow">
+        <!-- Nav content remains same -->
+    </nav>
+    <main class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-4">Find Your Dream Job</h1>
+            <div class="flex flex-wrap gap-4">
+                <div class="relative flex-grow">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <input type="text"
+                        class="block w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md leading-5 bg-white placeholder-gray-500 focus:outline-none focus:border-custom focus:ring-1 focus:ring-custom"
+                        placeholder="Search for jobs, companies, or keywords" />
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-map-marker-alt text-gray-400"></i>
+                    </div>
+                    <div class="flex gap-2">
+                        <select
+                            class="block pl-10 pr-8 py-2 border border-gray-300 rounded-md leading-5 bg-white focus:outline-none focus:border-custom focus:ring-1 focus:ring-custom">
+                            <option value="">Select Country</option>
+                            <option value="IN">India</option>
+                            <option value="US">United States</option>
+                            <option value="UK">United Kingdom</option>
+                        </select>
+                        <select
+                            class="block px-3 pr-8 py-2 border border-gray-300 rounded-md leading-5 bg-white focus:outline-none focus:border-custom focus:ring-1 focus:ring-custom min-w-[120px]">
+                            <option value="">Select State</option>
+                            <option value="MH">Maharashtra</option>
+                            <option value="KA">Karnataka</option>
+                            <option value="TN">Tamil Nadu</option>
+                        </select>
+                    </div>
+                </div>
+                <button
+                    class="!rounded-button bg-custom text-white px-6 py-2 font-medium hover:bg-custom/90 transition duration-300"
+                    onclick="document.querySelector(&#39;.job-listings&#39;).classList.remove(&#39;hidden&#39;); document.querySelector(&#39;.job-sort&#39;).classList.remove(&#39;hidden&#39;); document.querySelector(&#39;#initial-message&#39;).classList.add(&#39;hidden&#39;);">Apply
+                    >Apply
+                    Filters</button>
+            </div>
+        </div>
+        <div class="flex gap-6">
+            <div class="w-64 flex-shrink-0">
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h2 class="font-semibold text-lg mb-4">Filters</h2>
+
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Experience Level</label>
+                            <select
+                                class="block w-full border border-gray-300 rounded-md py-2 pl-3 pr-10 text-base focus:outline-none focus:ring-1 focus:ring-custom focus:border-custom">
+                                <option>All Levels</option>
+                                <option>Entry Level (0-2 years)</option>
+                                <option>Mid Level (2-5 years)</option>
+                                <option>Senior Level (5-8 years)</option>
+                                <option>Executive (8+ years)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Job Type</label>
+                            <div class="space-y-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox"
+                                        class="rounded border-gray-300 text-custom focus:ring-custom" />
+                                    <span class="ml-2 text-sm text-gray-700">Full-time</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox"
+                                        class="rounded border-gray-300 text-custom focus:ring-custom" />
+                                    <span class="ml-2 text-sm text-gray-700">Part-time</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox"
+                                        class="rounded border-gray-300 text-custom focus:ring-custom" />
+                                    <span class="ml-2 text-sm text-gray-700">Contract</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox"
+                                        class="rounded border-gray-300 text-custom focus:ring-custom" />
+                                    <span class="ml-2 text-sm text-gray-700">Remote</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Salary Range (₹)</label>
+                            <select
+                                class="block w-full border border-gray-300 rounded-md py-2 pl-3 pr-10 text-base focus:outline-none focus:ring-1 focus:ring-custom focus:border-custom">
+                                <option>All Ranges</option>
+                                <option>₹0 - ₹3,00,000</option>
+                                <option>₹3,00,000 - ₹6,00,000</option>
+                                <option>₹6,00,000 - ₹12,00,000</option>
+                                <option>₹12,00,000+</option>
+                            </select>
+                        </div>
+                        <div class="mb-8">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Skills</label>
+                            <select
+                                class="block w-full border border-gray-300 rounded-md py-2 pl-3 pr-10 text-base focus:outline-none focus:ring-1 focus:ring-custom focus:border-custom">
+                                <optgroup label="Development">
+                                    <option>Angular</option>
+                                    <option>C++</option>
+                                    <option>Django</option>
+                                    <option>Go</option>
+                                    <option>JavaScript</option>
+                                    <option>Java</option>
+                                    <option>Kotlin</option>
+                                    <option>PHP</option>
+                                    <option>Python</option>
+                                    <option>React</option>
+                                    <option>Ruby</option>
+                                    <option>Swift</option>
+                                    <option>TypeScript</option>
+                                    <option>Vue.js</option>
+                                </optgroup>
+                                <optgroup label="Design">
+                                    <option>Adobe Creative Suite</option>
+                                    <option>Adobe XD</option>
+                                    <option>Blender</option>
+                                    <option>Figma</option>
+                                    <option>Illustrator</option>
+                                    <option>InDesign</option>
+                                    <option>Photoshop</option>
+                                    <option>Sketch</option>
+                                    <option>UI/UX</option>
+                                </optgroup>
+                                <optgroup label="3D Tools">
+                                    <option>3ds Max</option>
+                                    <option>AutoCAD</option>
+                                    <option>Cinema 4D</option>
+                                    <option>Maya</option>
+                                    <option>SketchUp</option>
+                                    <option>Unity</option>
+                                    <option>Unreal Engine</option>
+                                    <option>ZBrush</option>
+                                </optgroup>
+                                <optgroup label="Management">
+                                    <option>Agile</option>
+                                    <option>Scrum</option>
+                                    <option>Project Management</option>
+                                </optgroup>
+                            </select>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span
+                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-custom text-white">
+                                    JavaScript
+                                    <button type="button" class="ml-1 inline-flex items-center">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </span>
+                                <span
+                                    class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-custom text-white">
+                                    React
+                                    <button type="button" class="ml-1 inline-flex items-center">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-grow">
+                <div class="bg-white rounded-lg shadow">
+                    <div class="p-4 border-b border-gray-200">
+                        <div class="flex items-center justify-between">
+                            <h2 class="text-lg font-semibold">Matching Jobs</h2>
+                            <div class="flex items-center space-x-2 job-sort">
+                                <span class="text-sm text-gray-500">Sort by:</span>
+                                <select
+                                    class="text-sm border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-custom focus:border-custom">
+                                    <option>Most Relevant</option>
+                                    <option>Newest</option>
+                                    <option>Highest Paid</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="divide-y divide-gray-200 job-listings">
+                        <div class="flex items-center justify-center p-8" id="initial-message">
+                            <p class="text-gray-500 text-lg">Please select filters and click &#39;Apply Filters&#39; to
+                                see matching jobs</p>
+                        </div>
+                        <div class="p-6 hover:bg-gray-50">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-grow">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <h3 class="text-lg font-semibold">Backend Developer</h3>
+                                        <span
+                                            class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">
+                                            95% Match
+                                        </span>
+                                    </div>
+                                    <p class="text-custom font-medium mb-2">Amazon</p>
+                                    <div class="flex items-center text-sm text-gray-500 mb-4">
+                                        <span class="flex items-center mr-4">
+                                            <i class="fas fa-map-marker-alt mr-1"></i>Bangalore, Karnataka
+                                        </span>
+                                        <span class="flex items-center mr-4">
+                                            <i class="fas fa-clock mr-1"></i>Full-time
+                                        </span>
+                                        <span class="flex items-center">
+                                            <i class="fa fa-indian-rupee-sign mr-1"></i>15,00,000 - 25,00,000
+                                        </span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-4">
+                                        <span class="px-2 py-1 bg-gray-100 rounded-full text-sm">Node.js</span>
+                                        <span class="px-2 py-1 bg-gray-100 rounded-full text-sm">MongoDB</span>
+                                        <span class="px-2 py-1 bg-gray-100 rounded-full text-sm">AWS</span>
+                                    </div>
+                                    <p class="text-gray-600">Looking for an experienced Backend Developer to build
+                                        scalable cloud infrastructure and services...</p>
+                                </div>
+                                <button
+                                    class="flex-shrink-0 bg-custom text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-custom/90">
+                                    Apply Now
+                                </button>
+                            </div>
+                        </div>
+                        <!-- More job listings with match percentage -->
+                        <div class="p-6 hover:bg-gray-50">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-grow">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <h3 class="text-lg font-semibold">Frontend Developer</h3><span
+                                            class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">92%
+                                            Match</span>
+                                    </div>
+                                    <p class="text-custom font-medium mb-2">Google</p>
+                                    <div class="flex items-center text-sm text-gray-500 mb-4"><span
+                                            class="flex items-center mr-4"><i
+                                                class="fas fa-map-marker-alt mr-1"></i>Hyderabad, Telangana</span><span
+                                            class="flex items-center mr-4"><i
+                                                class="fas fa-clock mr-1"></i>Full-time</span><span
+                                            class="flex items-center"><i
+                                                class="fa fa-indian-rupee-sign mr-1"></i>18,00,000 - 30,00,000</span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-4"><span
+                                            class="px-2 py-1 bg-gray-100 rounded-full text-sm">React</span><span
+                                            class="px-2 py-1 bg-gray-100 rounded-full text-sm">TypeScript</span><span
+                                            class="px-2 py-1 bg-gray-100 rounded-full text-sm">Next.js</span></div>
+                                    <p class="text-gray-600">Seeking a skilled Frontend Developer to create responsive
+                                        and interactive web applications...</p>
+                                </div><button
+                                    class="flex-shrink-0 bg-custom text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-custom/90">Apply
+                                    Now</button>
+                            </div>
+                        </div>
+                        <div class="p-6 hover:bg-gray-50">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-grow">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <h3 class="text-lg font-semibold">Full Stack Developer</h3><span
+                                            class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">88%
+                                            Match</span>
+                                    </div>
+                                    <p class="text-custom font-medium mb-2">Microsoft</p>
+                                    <div class="flex items-center text-sm text-gray-500 mb-4"><span
+                                            class="flex items-center mr-4"><i
+                                                class="fas fa-map-marker-alt mr-1"></i>Pune, Maharashtra</span><span
+                                            class="flex items-center mr-4"><i
+                                                class="fas fa-clock mr-1"></i>Full-time</span><span
+                                            class="flex items-center"><i
+                                                class="fa fa-indian-rupee-sign mr-1"></i>20,00,000 - 35,00,000</span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-4"><span
+                                            class="px-2 py-1 bg-gray-100 rounded-full text-sm">React</span><span
+                                            class="px-2 py-1 bg-gray-100 rounded-full text-sm">Node.js</span><span
+                                            class="px-2 py-1 bg-gray-100 rounded-full text-sm">PostgreSQL</span></div>
+                                    <p class="text-gray-600">Looking for a Full Stack Developer with experience in both
+                                        frontend and backend technologies...</p>
+                                </div><button
+                                    class="flex-shrink-0 bg-custom text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-custom/90">Apply
+                                    Now</button>
+                            </div>
+                        </div>
+                        <div class="p-6 hover:bg-gray-50">
+                            <div class="flex justify-between items-start">
+                                <div class="flex-grow">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <h3 class="text-lg font-semibold">DevOps Engineer</h3><span
+                                            class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">85%
+                                            Match</span>
+                                    </div>
+                                    <p class="text-custom font-medium mb-2">Netflix</p>
+                                    <div class="flex items-center text-sm text-gray-500 mb-4"><span
+                                            class="flex items-center mr-4"><i
+                                                class="fas fa-map-marker-alt mr-1"></i>Mumbai, Maharashtra</span><span
+                                            class="flex items-center mr-4"><i
+                                                class="fas fa-clock mr-1"></i>Full-time</span><span
+                                            class="flex items-center"><i
+                                                class="fa fa-indian-rupee-sign mr-1"></i>25,00,000 - 40,00,000</span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-2 mb-4"><span
+                                            class="px-2 py-1 bg-gray-100 rounded-full text-sm">Kubernetes</span><span
+                                            class="px-2 py-1 bg-gray-100 rounded-full text-sm">Docker</span><span
+                                            class="px-2 py-1 bg-gray-100 rounded-full text-sm">Jenkins</span></div>
+                                    <p class="text-gray-600">Seeking a DevOps Engineer to streamline deployment
+                                        processes and maintain cloud infrastructure...</p>
+                                </div><button
+                                    class="flex-shrink-0 bg-custom text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-custom/90">Apply
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer remains same -->
+    <footer class="bg-gray-800 mt-12">
+        <!-- Footer content remains same -->
+    </footer>

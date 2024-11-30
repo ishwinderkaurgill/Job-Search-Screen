@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Your Dream Job</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom-v2.css" rel="stylesheet">
+    <script
+        src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000"
+        data-border-radius="small"></script>
+</head>
+
+<body class="bg-gray-50">
+    <header class="fixed top-0 w-full bg-white shadow-sm z-50">
+        <div class="px-4 py-3">
+            <div class="relative mb-3">
+                <input type="text" placeholder="Search for jobs, companies, or keywords"
+                    class="w-full pl-10 pr-4 py-2 bg-gray-100 border-none rounded-lg text-sm"> <i
+                    class="fas fa-search absolute left-3 top-2.5 text-gray-400 text-sm"></i>
+            </div>
+            <div class="flex gap-2"> <select
+                    class="flex-1 bg-white border border-gray-200 rounded-lg text-sm py-2 px-3">
+                    <option>Select Country</option>
+                    <option>United States</option>
+                    <option>United Kingdom</option>
+                    <option>Canada</option>
+                </select>
+                <select class="flex-1 bg-white border border-gray-200 rounded-lg text-sm py-2 px-3">
+                    <option>Select State</option>
+                    <option>California</option>
+                    <option>New York</option>
+                    <option>Texas</option>
+                </select>
+                <button class="bg-custom text-white px-4 py-2 rounded-lg text-sm !rounded-button"> <i
+                        class="fas fa-filter"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="mt-32 mb-20 px-4">
+        <div class="mb-4">
+            <button class="flex items-center justify-between w-full bg-white p-3 rounded-lg shadow-sm"> <span
+                    class="text-sm font-medium">Filters</span>
+                <i class="fas fa-chevron-down text-gray-400"></i> </button>
+        </div>
+
+        <div class="space-y-4">
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="font-medium">Senior Backend Developer</h3> <button
+                        class="bg-custom text-white px-4 py-1.5 text-sm !rounded-button">Apply</button>
+                </div>
+                <div class="text-sm text-gray-600 mb-2">Amazon</div>
+                <div class="flex gap-2 mb-2">
+                    <span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-xs">Full-time</span>
+                    <span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-xs">Remote</span>
+                </div>
+                <p class="text-sm text-gray-500 line-clamp-2">We're looking for an experienced Backend Developer to
+                    build scalable cloud infrastructure and services.</p>
+                <div class="text-sm text-gray-600 mt-2">$120,000 - $180,000</div>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="font-medium">Frontend Developer</h3> <button
+                        class="bg-custom text-white px-4 py-1.5 text-sm !rounded-button">Apply</button>
+                </div>
+                <div class="text-sm text-gray-600 mb-2">Google</div>
+                <div class="flex gap-2 mb-2">
+                    <span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-xs">Full-time</span>
+                    <span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-xs">On-site</span>
+                </div>
+                <p class="text-sm text-gray-500 line-clamp-2">Join our team to build responsive and interactive web
+                    applications using modern frontend technologies.</p>
+                <div class="text-sm text-gray-600 mt-2">$100,000 - $150,000</div>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-sm">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="font-medium">Full Stack Developer</h3> <button
+                        class="bg-custom text-white px-4 py-1.5 text-sm !rounded-button">Apply</button>
+                </div>
+                <div class="text-sm text-gray-600 mb-2">Microsoft</div>
+                <div class="flex gap-2 mb-2">
+                    <span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-xs">Full-time</span>
+                    <span class="bg-gray-100 text-gray-600 px-2 py-0.5 rounded text-xs">Hybrid</span>
+                </div>
+                <p class="text-sm text-gray-500 line-clamp-2">Looking for a Full Stack developer with experience in both
+                    frontend and backend technologies.</p>
+                <div class="text-sm text-gray-600 mt-2">$130,000 - $190,000</div>
+            </div>
+        </div>
+    </main>
+
+    <nav class="fixed bottom-0 w-full bg-white border-t border-gray-200">
+        <div class="grid grid-cols-4 h-16">
+            <button class="flex flex-col items-center justify-center">
+                <i class="fas fa-home text-custom"></i>
+                <span class="text-xs mt-1">Home</span>
+            </button>
+            <button class="flex flex-col items-center justify-center"> <i class="fas fa-search text-gray-400"></i>
+                <span class="text-xs mt-1">Search</span>
+            </button> <button class="flex flex-col items-center justify-center">
+                <i class="fas fa-bookmark text-gray-400"></i>
+                <span class="text-xs mt-1">Saved</span>
+            </button>
+            <button class="flex flex-col items-center justify-center"> <i class="fas fa-user text-gray-400"></i>
+                <span class="text-xs mt-1">Profile</span>
+            </button>
+        </div>
+    </nav>
+</body>
+
+</html>
